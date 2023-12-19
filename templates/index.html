@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/templates/style.css">
+
+    <title>Управління GPIO</title>
+</head>
+<body>
+    <h1>Управління GPIO</h1>
+    <ul>
+        {% for pin_number in [18, 23, 24, 25, 8, 7, 12, 16] %}
+            <li>
+                <strong>GPIO {{ pin_number }}:</strong>
+                <a href="/gpio/on/{{ pin_number }}">Увімкнути</a>
+                <a href="/gpio/off/{{ pin_number }}">Вимкнути</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
